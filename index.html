@@ -6,25 +6,39 @@
 <title>Encriptador de Textos</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
-<div id="container">
-  <h1>Encriptador de Textos</h1>
-  <textarea id="input" placeholder="Ingrese su texto aquí"></textarea>
-  <textarea id="output" placeholder="Texto encriptado o desencriptado" readonly></textarea>
-  <br>
-  <button onclick="encrypt()">Encriptar</button>
-  <button onclick="decrypt()">Desencriptar</button>
-  <button onclick="copyText()">Copiar</button>
-  <br>
-  <img id="placeholder" src="placeholder2.jpg" alt="Placeholder">
-</div>
+<h1>Encriptador de Textos</h1>
 
-<footer>
-    Laura Angélica Flores Vidal creó este encriptador
-</footer>
+<main>
+      
+        <div class="encriptador">
+          <textarea class="box" id="input" placeholder="Ingrese su texto aquí"></textarea>
+          <button class="button" onclick="encrypt()">Encriptar</button>
+        </div>
 
+        <div class="tarjeta">
+            <div clas="imagen">
+                <img src="placeholder2.jpg" alt="Imagen Muñeco" class="img-muñeco">
+            </div>
+            <textarea class="box" id="output" placeholder="Texto encriptado" readonly></textarea>
+            
+            <button class="button" onclick="decrypt()">Desencriptar</button>
+            <button class="button" onclick="copyText()">Copiar</button>
+        </div>
+      
+        <!-- <img id="placeholder" src="placeholder2.jpg" alt="Placeholder"> -->
+      
+
+</main>
 <script>
-  function encrypt() {
+    function encrypt() {
+    // Hide the placeholder image
+    var placeholderImg = document.getElementById("placeholder-img");
+    if (placeholderImg) {
+        placeholderImg.style.display = "none";
+    }
     var inputText = document.getElementById("input").value;
     if (/[^a-zA-Z\s]/.test(inputText)) {
       alert("¡No se permiten caracteres especiales!");
@@ -32,6 +46,7 @@
     }
     var outputText = inputText.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
     document.getElementById("output").value = outputText;
+    
   }
 
   function decrypt() {
@@ -47,5 +62,12 @@
     alert("Texto copiado al portapapeles.");
   }
 </script>
+
+<footer>
+    Laura Angélica Flores Vidal creó este encriptador
+</footer>
+
 </body>
+
+
 </html>

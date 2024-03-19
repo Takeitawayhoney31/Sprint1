@@ -1,37 +1,87 @@
 
-  h1{
-    color:darkmagenta
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-  }
-  #container {
-    text-align: center;
-  }
-  #input, #output {
-    width: 300px;
-    height: 150px;
-    margin: 20px;
-    display: inline-block;
-    vertical-align: top;
-  }
+h1{
+  color: #3581B8
+}
 
-  body {
-    background-color: pink;
-  }
-  
-  button {
-    border-radius: 10px;
-    background-color: transparent;
-    color: black;
-    padding: 8px 16px;
-    border: 2px solid black;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  button:hover {
-    background-color: darkmagenta;
-    color: white;
-  }
-  
+body {
+  font-family: Arial, sans-serif;
+  background-color: #EBE9E9;
+}
+
+main{
+display: flex;
+flex-direction: row;
+background-size: cover;
+background-position: center;
+}
+
+
+.encriptador {
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width:60%;
+  margin-top: 40px;
+}
+
+.tarjeta {
+width: 270px;
+height: 270px;
+box-shadow: 10px 24px 32px -8px var(--Gray);
+margin-top: 40px;
+border-radius: 32px;
+text-align: center;
+}
+
+#input, #output {
+width: 300px;
+height: 150px;
+margin: 20px;
+display: inline-block;
+vertical-align: top;
+}
+
+.button {
+background-color: #3581B8;
+color: #fff;
+border: none;
+border-radius: 20px;
+padding: 20px 30px;
+cursor: pointer;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+margin:20px;
+
+}
+.button:hover {
+background-color: #2a688f;
+}
+
+.button-container {
+display: flex;
+justify-content: space-between;
+width: 80%; /* Adjust width as needed */
+}
+
+
+/* Styles for text area inputs */
+.box {
+width: 45%; /* Adjust width as needed */
+border: 2px solid #DEE2D6;
+border-radius: 10px;
+padding: 10px;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Optional: Hover effect for text area inputs */
+.box:hover {
+border-color: hsl(24, 90%, 54%); /* Change border color on hover if desired */
+}
+
+footer{
+color:rgb(70, 70, 70);
+text-align: center;
+padding-top: 40px;
+}
