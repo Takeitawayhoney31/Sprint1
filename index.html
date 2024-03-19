@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encriptador de Textos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">
+  <h1>Encriptador de Textos</h1>
+  <textarea id="input" placeholder="Ingrese su texto aquí"></textarea>
+  <textarea id="output" placeholder="Texto encriptado o desencriptado" readonly></textarea>
+  <br>
+  <button onclick="encrypt()">Encriptar</button>
+  <button onclick="decrypt()">Desencriptar</button>
+  <button onclick="copyText()">Copiar</button>
+  <br>
+  <img id="placeholder" src="placeholder2.jpg" alt="Placeholder">
+</div>
+
+<footer>
+    Laura Angélica Flores Vidal creó este encriptador
+</footer>
+
+<script>
+  function encrypt() {
+    var inputText = document.getElementById("input").value;
+    if (/[^a-zA-Z\s]/.test(inputText)) {
+      alert("¡No se permiten caracteres especiales!");
+      return;
+    }
+    var outputText = inputText.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
+    document.getElementById("output").value = outputText;
+  }
+
+  function decrypt() {
+    var inputText = document.getElementById("output").value;
+    var outputText = inputText.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
+    document.getElementById("output").value = outputText;
+  }
+
+  function copyText() {
+    var outputTextarea = document.getElementById("output");
+    outputTextarea.select();
+    document.execCommand("copy");
+    alert("Texto copiado al portapapeles.");
+  }
+</script>
+</body>
+</html>
