@@ -1,47 +1,60 @@
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("input").addEventListener("input", function(event) {
+      const inputText = event.target.value.toLowerCase().replace(/[^a-z\s]/g, ''); // Remove special characters and convert to lowercase
+      event.target.value = inputText; // Update input value
+  });
+});
+
 function encryptText() {
-  var inputText = document.getElementById("inputText").value.toLowerCase(); // Convertir a minúsculas
-  var outputText = "";
+  const inputText = document.getElementById('input').value;
+  let encryptedText = '';
 
-  // Validación para caracteres especiales y mayúsculas
-  if (/[^a-z\s]/.test(inputText)) {
-      alert("¡No se permiten caracteres especiales ni mayúsculas!");
-      return;
+  for (let i = 0; i < inputText.length; i++) {
+      switch (inputText[i]) {
+          case 'e':
+              encryptedText += 'enter';
+              break;
+          case 'i':
+              encryptedText += 'imes';
+              break;
+          case 'a':
+              encryptedText += 'ai';
+              break;
+          case 'o':
+              encryptedText += 'ober';
+              break;
+          case 'u':
+              encryptedText += 'ufat';
+              break;
+          default:
+              encryptedText += inputText[i];
+      }
   }
 
-  // Encriptar texto
-  outputText = inputText.replace(/e/g, "enter")
-                        .replace(/i/g, "imes")
-                        .replace(/a/g, "ai")
-                        .replace(/o/g, "ober")
-                        .replace(/u/g, "ufat");
-
-  document.getElementById("output").value = outputText;
+  document.getElementById('output').value = encryptedText;
 }
 
-// Función para desencriptar texto
-function decryptText(text) {
-  return text.replace(/enter/g, "e")
-             .replace(/imes/g, "i")
-             .replace(/ai/g, "a")
-             .replace(/ober/g, "o")
-             .replace(/ufat/g, "u");
+function removeBackgroundImage() {
+  document.getElementById('output').classList.remove("background-image");
 }
 
-// Función para copiar texto encriptado al portapapeles
+function decryptText() {
+  const encryptedText = document.getElementById('output').value;
+  let decryptedText = '';
+
+  // Reverse of encryption process
+  decryptedText = encryptedText.replace(/enter/g, 'e')
+                               .replace(/imes/g, 'i')
+                               .replace(/ai/g, 'a')
+                               .replace(/ober/g, 'o')
+                               .replace(/ufat/g, 'u');
+
+  document.getElementById('output').value = decryptedText;
+}
+
 function copyEncryptedText() {
-  var inputText = document.getElementById("input").value;
-  var encryptedText = encryptText(inputText);
-  
-  if (encryptedText !== null) {
-      navigator.clipboard.writeText(encryptedText)
-          .then(() => {
-              console.log('Texto encriptado copiado al portapapeles');
-              alert('Texto encriptado copiado al portapapeles');
-          })
-          .catch(err => {
-              console.error('Error al copiar el texto encriptado: ', err);
-              alert('Error al copiar el texto encriptado');
-          });
-  }
+  const outputText = document.getElementById('output');
+  outputText.select();
+  document.execCommand('copy');
+  alert('Texto copiado al portapapeles');
 }
-

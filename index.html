@@ -3,25 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encriptador de texto">
     <title>Encriptador de texto</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
-
-
 <body>
+   <div class="bg">
+
+
     <div class="container">
-        <h1>Encriptador de texto</h1>
+
+    <!-- Input Text Box Section -->
+    <section class="input-section">
+      <h1>Encriptador de texto</h1>
         <input type="text" id="input" placeholder="Ingrese su texto aquí">
         <p id="message">No se permiten caracteres especiales ni mayúsculas</p>
-        <button onclick="encryptText()">Encriptar</button>
-        <textarea id="output" placeholder="Texto encriptado" rows="4" readonly></textarea>
-        <button onclick="decryptText()">Desencriptar</button>
-        <button id="copyButton" onclick="copyEncryptedText()">Copiar</button>
-        <footer>Encriptador de texto creado por Laura Angélica Flores Vidal</footer>
-    </div>
+        <button id="encriptar" onclick="removeBackgroundImage(); encryptText()">Encriptar</button>
+    </section>
+
+    <!-- Output Text Box Section -->
+    <section class="output-section">
+      <textarea id="output" class="background-image" rows="4" readonly></textarea>
+   </section>
+   
+   <section class="botones">
+   <button id="desencriptar" onclick="decryptText()">Desencriptar</button>
+   <button id="copyButton" onclick="copyEncryptedText()">Copiar</button>
+   </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <span>Encriptador de texto creado por Laura Angélica Flores Vidal para portafolio Alura</span>
+        <div class="footer-logos">
+            <a href="https://www.linkedin.com/in/laura-flores-tech" target="_blank"><img src="ik.jpeg" alt="LinkedIn"></a>
+            <img src="unnamed.jpg" alt="School">
+        </div>
+    </footer>
+</div>
 
     <script src="app.js"></script>
+   </div>
 </body>
-
-
 </html>

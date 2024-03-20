@@ -1,3 +1,57 @@
+@media only screen and (max-width: 768px) {
+  .container {
+      max-width: 600px;
+  }
+}
+
+/* Styles for mobile devices */
+
+@media only screen and (max-width: 480px) {
+  .container {
+      max-width: 90%;
+      padding: 10px;
+  }
+  input[type="text"], textarea {
+      width: 100%;
+  }
+}
+
+.bg {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 300% 300%;
+  background-image: linear-gradient(-45deg, #00a2ff 0%, #00a2ff 25%, #ae00ff 51%, #fc005c 100%);
+  -webkit-animation: AnimateBG 20s ease infinite;
+          animation: AnimateBG 20s ease infinite;
+}
+
+@-webkit-keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9e6e6; /* Color de fondo rosa pastel */
@@ -5,13 +59,32 @@ body {
   padding: 0;
 }
 
-.container {
-  max-width: 600px;
+.container{
+ max-width: 600px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: rgb(236, 251, 255);
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.input-section {
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.output-section {
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.botones{
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+
 }
 
 h1 {
@@ -23,34 +96,57 @@ footer {
   text-align: center;
   margin-top: 20px;
   color: #666;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-#input, #output {
+#input {
   width: 90%;
-    padding: 15px;
-    margin-bottom: 5px;
-    border: groove;
-    border-radius: 8px;
-    background-color: #f5f5f5; /* Color de fondo gris claro */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 15px;
+  margin-bottom: 20px;
+  border-color: #ae00ff;
+  border-radius: 8px;
+  background-color: #f5f5f5; /* Color de fondo gris claro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
+
+#output.background-image {
+  width: 90%;
+  max-width: 500px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-color: #ae00ff;
+  border-radius: 8px;
+  background-image: url('Aun\ no\ hay\ texto\ aqui\ \(1\).png'); /* Replace 'background_image.jpg' with the path to your image */
+  background-size: cover; /* Cover the entire background */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  background-position: center; /* Center the background image */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
 
 #message {
   font-style: italic;
   color: #ff69b4; /* Color rosa pastel */
-  margin-bottom: 3px;
+  margin-bottom: 10px;
+  margin-top: 0px;
 }
 
 button {
-  padding: 10px 20px;
+  padding: 15px 30px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #ff69b4; /* Color rosa pastel */
   color: #fff;
   cursor: pointer;
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin-bottom: 20px;
+  width: 150px; /* Adjust the width as needed */
 }
+
 
 button:hover {
   background-color: #d63a86; /* Color rosa pastel más oscuro */
@@ -59,3 +155,18 @@ button:hover {
 #copyButton {
   margin-left: 10px;
 }
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.footer-logos img {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  cursor: pointer;
+  margin-top:20px;
+}
+
