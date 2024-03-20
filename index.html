@@ -1,42 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Encriptador de Textos</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
-<h1>Encriptador de Textos</h1>
+    <div class="container">
+        <h1>Encriptador de texto</h1>
+        <input type="text" id="input" placeholder="Ingrese su texto aquí">
+        <p id="message">No se permiten caracteres especiales ni mayúsculas</p>
+        <button onclick="encryptText()">Encriptar</button>
+        <textarea id="output" placeholder="Texto encriptado" rows="4" readonly></textarea>
+        <button onclick="decryptText()">Desencriptar</button>
+        <button id="copyButton" onclick="copyEncryptedText()">Copiar</button>
+        <footer>Encriptador de texto creado por Laura Angélica Flores Vidal</footer>
+    </div>
 
-<main>
-      
-        <div class="encriptador">
-          <textarea class="box" id="input" placeholder="Ingrese su texto aquí"></textarea>
-          <button class="button" onclick="encrypt()">Encriptar</button>
-        </div>
-
-        <div class="tarjeta">
-            <div clas="imagen">
-                <img src="placeholder2.jpg" alt="Imagen Muñeco" class="img-muñeco">
-            </div>
-            <textarea class="box" id="output" placeholder="Texto encriptado" readonly></textarea>
-            
-            <button class="button" onclick="decrypt()">Desencriptar</button>
-            <button class="button" onclick="copyText()">Copiar</button>
-        </div>
-      
-        <!-- <img id="placeholder" src="placeholder2.jpg" alt="Placeholder"> -->
-      
-
-</main>
-
-<footer>
-    Laura Angélica Flores Vidal creó este encriptador
-</footer>
-
+    <script src="app.js"></script>
 </body>
 
 

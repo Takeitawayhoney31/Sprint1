@@ -1,88 +1,61 @@
-
-h1{
-  color: #3581B8;
-  text-align: center;
-}
-
 body {
-  font-family: Arial, sans-serif;
-  background-color: #EBE9E9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9e6e6; /* Color de fondo rosa pastel */
+  margin: 0;
+  padding: 0;
 }
 
-main{
-display: flex;
-flex-direction: row;
-background-size: cover;
-background-position: center;
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-
-.encriptador {
- display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+h1 {
   text-align: center;
-  width:60%;
-  margin-top: 40px;
+  color: #ff69b4; /* Color rosa pastel */
 }
 
-.tarjeta {
-width: 270px;
-height: 270px;
-box-shadow: 10px 24px 32px -8px var(--Gray);
-margin-top: 40px;
-border-radius: 32px;
-text-align: center;
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
 }
 
 #input, #output {
-width: 300px;
-height: 150px;
-margin: 20px;
-display: inline-block;
-vertical-align: top;
+  width: 90%;
+    padding: 15px;
+    margin-bottom: 5px;
+    border: groove;
+    border-radius: 8px;
+    background-color: #f5f5f5; /* Color de fondo gris claro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-.button {
-background-color: #3581B8;
-color: #fff;
-border: none;
-border-radius: 20px;
-padding: 20px 30px;
-cursor: pointer;
-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
-margin:20px;
-
-}
-.button:hover {
-background-color: #2a688f;
+#message {
+  font-style: italic;
+  color: #ff69b4; /* Color rosa pastel */
+  margin-bottom: 3px;
 }
 
-.button-container {
-display: flex;
-justify-content: space-between;
-width: 80%; /* Adjust width as needed */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff69b4; /* Color rosa pastel */
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
-
-/* Styles for text area inputs */
-.box {
-width: 45%; /* Adjust width as needed */
-border: 2px solid #DEE2D6;
-border-radius: 10px;
-padding: 10px;
-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-
+button:hover {
+  background-color: #d63a86; /* Color rosa pastel más oscuro */
 }
 
-/* Optional: Hover effect for text area inputs */
-.box:hover {
-border-color: hsl(24, 90%, 54%); /* Change border color on hover if desired */
-}
-
-footer{
-color:rgb(70, 70, 70);
-text-align: center;
-padding-top: 40px;
+#copyButton {
+  margin-left: 10px;
 }
